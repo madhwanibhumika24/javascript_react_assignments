@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DOM-based To-Do List</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="page">
+
+        <main class="todo-container">
+
+            <div class="todo-header">
+                <h1>To-Do List</h1>
+                <p>Organize your tasks and stay productive</p>
+            </div>
+
+            <div class="task-input">
+
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="What needs to be done?"
+                    maxlength="100"
+                >
+
+                <button id="addTaskBtn">
+                    Add Task
+                </button>
+
+            </div>
+
+            <div class="task-summary">
+                <span>My Tasks</span>
+                <span id="taskCount">0 tasks</span>
+            </div>
+
+            <ul id="taskList">
+                <!-- Tasks will be added dynamically -->
+            </ul>
+
+            <div id="emptyMessage" class="empty-message">
+                No tasks yet. Add your first task.
+            </div>
+
+        </main>
+
+        <a href="../index.html" class="dashboard-link">
+            ← Back to Dashboard
+        </a>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
