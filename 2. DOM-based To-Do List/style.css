@@ -128,24 +128,12 @@ body {
     margin-top: 12px;
 }
 
-/* Empty Message */
-
-.empty-message {
-    padding: 25px 10px;
-
-    text-align: center;
-
-    color: #888;
-
-    font-size: 14px;
-}
-
-/* Tasks */
+/* Individual Task */
 
 .task-item {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 12px;
 
     padding: 12px;
 
@@ -156,6 +144,21 @@ body {
     border: 1px solid #e5e5e5;
     border-radius: 8px;
 }
+
+/* Checkbox */
+
+.task-checkbox {
+    width: 18px;
+    height: 18px;
+
+    flex-shrink: 0;
+
+    cursor: pointer;
+
+    accent-color: #222;
+}
+
+/* Task Text */
 
 .task-text {
     flex: 1;
@@ -170,34 +173,36 @@ body {
     color: #888;
 }
 
-.complete-btn,
+/* Delete Button */
+
 .delete-btn {
-    padding: 7px 10px;
+    padding: 7px 11px;
 
     border: none;
     border-radius: 5px;
+
+    background: #ddd;
+    color: #222;
 
     font-size: 12px;
 
     cursor: pointer;
 }
 
-.complete-btn {
-    background: #222;
-    color: #fff;
-}
-
-.delete-btn {
-    background: #ddd;
-    color: #222;
-}
-
-.complete-btn:hover {
-    background: #444;
-}
-
 .delete-btn:hover {
     background: #ccc;
+}
+
+/* Empty Message */
+
+.empty-message {
+    padding: 25px 10px;
+
+    text-align: center;
+
+    color: #888;
+
+    font-size: 14px;
 }
 
 /* Dashboard Link */
@@ -244,19 +249,16 @@ body {
     .task-input button {
         width: 100%;
     }
-        .task-item {
-        align-items: flex-start;
-        flex-wrap: wrap;
+
+    .task-item {
+        gap: 10px;
     }
 
     .task-text {
-        width: 100%;
-        flex-basis: 100%;
+        font-size: 14px;
     }
 
-    .complete-btn,
     .delete-btn {
-        flex: 1;
+        padding: 7px 10px;
     }
-
 }
