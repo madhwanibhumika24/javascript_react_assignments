@@ -174,3 +174,20 @@ button:hover {
     }
 
 }
+
+.form-group input.input-error {
+    border-color: #c0392b;
+}
+
+.form-group input.input-success {
+    border-color: #2e7d32;
+}
+
+.form-group small {
+    color: #c0392b;
+}
+
+.success-message {
+    color: #2e7d32;
+    font-weight: 600;
+}
