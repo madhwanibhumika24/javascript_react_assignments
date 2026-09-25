@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript Form Validation</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="page">
+
+        <main class="form-container">
+
+            <div class="form-header">
+                <h1>Create Account</h1>
+                <p>Register by entering your details below</p>
+            </div>
+
+            <form id="registrationForm">
+
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter your full name"
+                    >
+
+                    <small id="nameError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                    >
+
+                    <small id="emailError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        placeholder="Enter your phone number"
+                        maxlength="10"
+                    >
+
+                    <small id="phoneError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Enter your password"
+                    >
+
+                    <small id="passwordError"></small>
+                </div>
+
+                <button type="submit">
+                    Create Account
+                </button>
+
+                <div id="successMessage" class="success-message"></div>
+
+            </form>
+
+        </main>
+
+        <a href="../index.html" class="dashboard-link">
+            ← Back to Dashboard
+        </a>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
