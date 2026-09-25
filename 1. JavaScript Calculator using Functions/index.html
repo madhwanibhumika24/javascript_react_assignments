@@ -12,42 +12,58 @@
 
 <body>
 
-    <main class="calculator">
+    <div class="page">
 
-        <div class="calculator-header">
-            <h1>Calculator</h1>
-            <p>Perform basic arithmetic operations</p>
-        </div>
+        <main class="calculator">
 
-        <div class="form-group">
-            <label for="num1">First Number</label>
-            <input type="number" id="num1" placeholder="Enter first number">
-        </div>
+            <div class="calculator-header">
+                <h1>Calculator</h1>
+                <p>Perform basic arithmetic operations</p>
+            </div>
 
-        <div class="form-group">
-            <label for="operator">Operation</label>
+            <div class="form-group">
+                <label for="num1">First Number</label>
+                <input
+                    type="number"
+                    id="num1"
+                    placeholder="Enter first number"
+                >
+            </div>
 
-            <select id="operator">
-                <option value="+">Addition (+)</option>
-                <option value="-">Subtraction (-)</option>
-                <option value="*">Multiplication (×)</option>
-                <option value="/">Division (÷)</option>
-            </select>
-        </div>
+            <div class="form-group">
+                <label for="operator">Operation</label>
 
-        <div class="form-group">
-            <label for="num2">Second Number</label>
-            <input type="number" id="num2" placeholder="Enter second number">
-        </div>
+                <select id="operator">
+                    <option value="+">Addition (+)</option>
+                    <option value="-">Subtraction (-)</option>
+                    <option value="*">Multiplication (×)</option>
+                    <option value="/">Division (÷)</option>
+                </select>
+            </div>
 
-        <button onclick="calculate()">Calculate</button>
+            <div class="form-group">
+                <label for="num2">Second Number</label>
+                <input
+                    type="number"
+                    id="num2"
+                    placeholder="Enter second number"
+                >
+            </div>
 
-        <div class="result-box">
-            <span>Result</span>
-            <strong id="result">—</strong>
-        </div>
+            <button onclick="calculate()">Calculate</button>
 
-    </main>
+            <div class="result-box">
+                <span>Result</span>
+                <strong id="result">—</strong>
+            </div>
+
+        </main>
+
+        <a href="../index.html" class="dashboard-link">
+            ← Back to Dashboard
+        </a>
+
+    </div>
 
     <script src="script.js"></script>
 
