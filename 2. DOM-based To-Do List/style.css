@@ -140,6 +140,66 @@ body {
     font-size: 14px;
 }
 
+/* Tasks */
+
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 12px;
+
+    margin-bottom: 10px;
+
+    background: #f8f8f8;
+
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+}
+
+.task-text {
+    flex: 1;
+
+    font-size: 14px;
+
+    word-break: break-word;
+}
+
+.task-text.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.complete-btn,
+.delete-btn {
+    padding: 7px 10px;
+
+    border: none;
+    border-radius: 5px;
+
+    font-size: 12px;
+
+    cursor: pointer;
+}
+
+.complete-btn {
+    background: #222;
+    color: #fff;
+}
+
+.delete-btn {
+    background: #ddd;
+    color: #222;
+}
+
+.complete-btn:hover {
+    background: #444;
+}
+
+.delete-btn:hover {
+    background: #ccc;
+}
+
 /* Dashboard Link */
 
 .dashboard-link {
@@ -183,6 +243,20 @@ body {
 
     .task-input button {
         width: 100%;
+    }
+        .task-item {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .task-text {
+        width: 100%;
+        flex-basis: 100%;
+    }
+
+    .complete-btn,
+    .delete-btn {
+        flex: 1;
     }
 
 }
