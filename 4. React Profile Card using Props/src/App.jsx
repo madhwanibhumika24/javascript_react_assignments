@@ -1,32 +1,47 @@
 import "./App.css";
+import profileImage from "./assets/profile.jpeg";
 
 function App() {
   return (
     <div className="page">
+
       <main className="profile-card">
+
         <div className="profile-image">
           <img
-            src="https://i.pravatar.cc/300?img=12"
-            alt="Profile"
+            src={profileImage}
+            alt="Bhumika Madhwani"
           />
         </div>
 
         <div className="profile-content">
-          <h1>Alex Johnson</h1>
-          <p className="role">Frontend Developer</p>
 
-          <p className="description">
-            Passionate about building clean, responsive, and
-            user-friendly web applications.
+          <h1>Bhumika Madhwani</h1>
+
+          <p className="role">
+            Backend Developer
           </p>
 
-          <button>View Profile</button>
+          <p className="description">
+            Passionate about building reliable, efficient,
+            and scalable backend applications.
+          </p>
+
+          <button>
+            View Profile
+          </button>
+
         </div>
+
       </main>
 
-      <a href="../../index.html" className="dashboard-link">
+      <a
+        href="http://127.0.0.1:5500/index.html"
+        className="dashboard-link"
+      >
         ← Back to Dashboard
       </a>
+
     </div>
   );
 }
