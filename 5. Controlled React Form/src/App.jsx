@@ -10,6 +10,8 @@ function App() {
     message: "",
   });
 
+  const [submitted, setSubmitted] = useState(false);
+
   function handleChange(event) {
     const { name, value } = event.target;
 
@@ -17,6 +19,25 @@ function App() {
       ...previousData,
       [name]: value,
     }));
+
+    setSubmitted(false);
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    setSubmitted(true);
+  }
+
+  function handleClear() {
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      course: "",
+      message: "",
+    });
+
+    setSubmitted(false);
   }
 
   return (
@@ -28,7 +49,8 @@ function App() {
           <p>Enter your details and view them instantly</p>
         </div>
 
-        <form>
+        <form onSubmit={handleSubmit}>
+
           <div className="form-group">
             <label htmlFor="name">Full Name</label>
             <input
@@ -92,6 +114,26 @@ function App() {
               rows="4"
             />
           </div>
+
+          <div className="form-actions">
+            <button type="submit" className="submit-btn">
+              Submit
+            </button>
+
+            <button
+              type="button"
+              className="clear-btn"
+              onClick={handleClear}
+            >
+              Clear
+            </button>
+          </div>
+
+          {submitted && (
+            <div className="success-message">
+              Form submitted successfully.
+            </div>
+          )}
         </form>
 
         <section className="preview">
