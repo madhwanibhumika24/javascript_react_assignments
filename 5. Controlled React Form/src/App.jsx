@@ -13,15 +13,16 @@ function App() {
   function handleChange(event) {
     const { name, value } = event.target;
 
-    setFormData({
-      ...formData,
+    setFormData((previousData) => ({
+      ...previousData,
       [name]: value,
-    });
+    }));
   }
 
   return (
     <div className="page">
       <main className="form-container">
+
         <div className="form-header">
           <h1>Student Information</h1>
           <p>Enter your details and view them instantly</p>
@@ -89,7 +90,7 @@ function App() {
               onChange={handleChange}
               placeholder="Enter your message"
               rows="4"
-            ></textarea>
+            />
           </div>
         </form>
 
@@ -124,6 +125,7 @@ function App() {
             <strong>{formData.message || "—"}</strong>
           </div>
         </section>
+
       </main>
 
       <a
